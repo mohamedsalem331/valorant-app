@@ -18,45 +18,40 @@ const Ability: React.FC<AbilityProps> = ({
 }) => {
   return (
     <>
-      <div className="w-full relative h-full">
-        <div className="flex flex-col gap-14 ">
-          fds
-          <div className="flex flex-row gap-3 items-center">
-            <div className="relative text-center flex flex-col ">
-              <div className="w-[137px] h-[157px] flex items-center justify-center bg-primary rounded-md">
-                <Image src={artwork} alt="controller-icon" />
-              </div>
-              <span className="text-white text-[17px]">{name}</span>
-              <div className="flex flex-row divide-x-4 divide-primary gap-2 justify-between">
-                <div className="flex flex-col">
-                  <Image
-                    src={cooldownImg}
-                    className="w-[25px] h-auto"
-                    alt="controller-icon"
-                  />
-                  <span className="text-white text-[10px]">{cooldown}</span>
-                </div>
-                <div className="flex flex-col">
-                  <Image
-                    src={durationImg}
-                    className="w-[25px] h-auto"
-                    alt="controller-icon"
-                  />
-                  <span className="text-white text-[10px]">{duration}</span>
-                </div>
-                <div className="flex flex-col">
-                  <Image
-                    src={costImg}
-                    className="w-[25px] h-auto"
-                    alt="controller-icon"
-                  />
-                  <span className="text-white text-[10px]">{cost}</span>
-                </div>
-              </div>
+      <div className="flex flex-row gap-3 items-center">
+        <div className="relative text-center flex flex-col gap-3">
+          <div className="w-[137px] h-[157px] flex items-center justify-center bg-primary">
+            <Image src={artwork} alt="controller-icon" />
+          </div>
+          <span className="text-white text-[17px] font-bold ">{name}</span>
+          <div className="flex flex-row divide-x-4 divide-primary items-center ">
+            <div className="flex flex-col  px-4">
+              <Image
+                src={cooldownImg}
+                className="w-[25px] h-auto"
+                alt="controller-icon"
+              />
+              <span className="text-white text-[10px]">{cooldown}</span>
             </div>
-            <span className="text-white text-[19px]">{description}</span>
+            <div className="flex flex-col  px-4">
+              <Image
+                src={durationImg}
+                className="w-[25px] h-auto"
+                alt="controller-icon"
+              />
+              <span className="text-white text-[10px]">{duration}</span>
+            </div>
+            <div className="flex flex-col  px-4">
+              <Image
+                src={costImg}
+                className="w-[25px] h-auto"
+                alt="controller-icon"
+              />
+              <span className="text-white text-[10px]">{cost}</span>
+            </div>
           </div>
         </div>
+        <span className="text-white text-[19px]">{description}</span>
       </div>
     </>
   );

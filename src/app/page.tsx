@@ -16,7 +16,7 @@ let data = [
     name: "SHROUDED STEP",
     artwork: Ability1Img,
     duration: "15 s",
-    cost: "150",
+    cost: 150,
     cooldown: "30 s",
     description:
       "EQUIP a shrouded step ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location",
@@ -26,7 +26,7 @@ let data = [
     name: "SHROUDED STEP",
     artwork: Ability2Img,
     duration: "15 s",
-    cost: "150",
+    cost: 150,
     cooldown: "30 s",
     description:
       "EQUIP a shrouded step ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location",
@@ -36,7 +36,7 @@ let data = [
     name: "SHROUDED STEP",
     artwork: Ability3Img,
     duration: "15 s",
-    cost: "150",
+    cost: 150,
     cooldown: "30 s",
     description:
       "EQUIP a shrouded step ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location",
@@ -46,7 +46,7 @@ let data = [
     name: "SHROUDED STEP",
     artwork: Ability4Img,
     duration: "15 s",
-    cost: "150",
+    cost: 150,
     cooldown: "30 s",
     description:
       "EQUIP a shrouded step ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location",
@@ -58,27 +58,36 @@ export default function Home() {
   return (
     <>
       <Logo />
-      <div className="relative flex items-center justify-center h-full">
-        <div className="absolute top-0 left-0 opacity-5 bg-secondary w-full h-full">
-          <Image className="block w-screen " src={heroImg} alt="heroimg" />
+      <div className="absolute top-0 left-0 opacity-5 bg-secondary w-full h-full ">
+        <Image
+          className=" block w-screen h-screen"
+          src={heroImg}
+          alt="heroimg"
+        />
+      </div>
+      <div className="relative h-full w-full flex flex-col justify-end items-center  overflow-x-hidden">
+        <div className="flex justify-center items-center h-full">
+          {/* /<div className="h-full justify-center justify-self-center items-center"> */}
+          <div className="flex flex-row gap-32 ">
+            {[...Array(5)].map((_, idx) => (
+              <AgentCard key={idx} />
+            ))}
+          </div>
         </div>
-        <div className="flex flex-row gap-40">
-          {[...Array(5)].map((_, idx) => (
-            <AgentCard key={idx} />
-          ))}
+        <div className="container ml-32 mb-16 ">
+          <Description />
         </div>
       </div>
-      <div className="ml-72 -translate-y-12">
-        <Description />
-      </div>
-      <div className="flex flex-row  w-full justify-center items-center">
-        <div className="basis-[70%] ml-36">
-          {data.map((data, idx) => (
-            <Ability {...data} key={idx} />
-          ))}
+      <div className=" flex flex-row w-full">
+        <div className=" relative basis-[100%] ml-32 mt-40">
+          <div className=" flex flex-col gap-24">
+            {data.map((data, idx) => (
+              <Ability {...data} key={idx} />
+            ))}
+          </div>
         </div>
-        <div className="w-full h-full flex justify-center">
-          <Image className="w-[60rem] h-auto" src={AgentImg} alt="AgentImg" />
+        <div className="w-full h-full flex justify-center -translate-y-[15rem]  ">
+          <Image className="w-[100rem] h-auto " src={AgentImg} alt="AgentImg" />
         </div>
       </div>
     </>
