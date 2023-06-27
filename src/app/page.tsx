@@ -79,16 +79,24 @@ export default function Home() {
         </div>
       </div>
       <div className=" flex flex-row w-full">
-        <div className=" relative basis-[100%] ml-32 mt-40">
-          <div className=" flex flex-col gap-24">
+        <div className=" relative basis-[70%] h-[150px] ml-32 mt-40 ">
+          <div className=" flex gap-14 ability-list z-10 ">
             {data.map((data, idx) => (
               <Ability {...data} key={idx} />
             ))}
           </div>
         </div>
-        <div className="w-full h-full flex justify-center -translate-y-[15rem]  ">
-          <Image className="w-[100rem] h-auto " src={AgentImg} alt="AgentImg" />
+        <div className="w-[600px] h-[400]">
+          <video preload="true" loop muted>
+            <source
+              src="https://assets.contentstack.io/v3/assets/bltb6530b271fddd0b1/blt70e2c9db1c0793df/5ecad815c846021917ecbb85/Omen_E_v001_web.mp4"
+              type="video/mp4"
+            />
+          </video>
         </div>
+        {/* <div className="w-full h-full flex justify-center -translate-y-[15rem]  ">
+          <Image className="w-[100rem] h-auto " src={AgentImg} alt="AgentImg" />
+        </div> */}
       </div>
     </>
   );

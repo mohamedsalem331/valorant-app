@@ -12,7 +12,7 @@ const AgentCard = () => {
           className="absolute -translate-y-[2.5rem] scale-110 "
         />
         <div className="relative w-[15.5rem] h-[26.5rem]  border-[1px] rounded-lg border-gray-300 border-opacity-50 animate-gradient">
-          <div className="absolute bottom-[12%] left-[35%] text-white text-[28px] font-bold">
+          <div className="absolute bottom-[12%] left-[33%] text-white text-[28px] font-bold">
             OMEN
           </div>
         </div>

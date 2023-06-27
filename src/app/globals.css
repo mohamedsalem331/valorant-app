@@ -27,6 +27,23 @@ html {
   transition: 300ms;
 }
 
+/* .test:hover {
+  background-color: red;
+  transition: ease-in-out;
+  transition-duration: 1s;
+} */
+
+.ability-list::before {
+  content: "";
+  display: block;
+  height: 0.1rem;
+  position: absolute;
+  top: 50%;
+  background-color: rgb(228, 228, 228);
+  z-index: -1;
+  width: 100%;
+}
+
 @keyframes fadegradient {
   0% {
     opacity: 1;
