@@ -82,8 +82,7 @@ export async function GET(
   { params }: { params: { name: string } }
 ) {
   const name = params.name;
-  const data = await getAgentData(name);
-  console.log(data);
+  let data = await getAgentData(name);
 
   return NextResponse.json({ data });
 }

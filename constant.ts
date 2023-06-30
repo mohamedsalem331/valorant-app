@@ -1,34 +1,3 @@
-export const data = [
-  {
-    name: "Omen",
-    artwork: "/Assets/omen",
-    abilities: [
-      {
-        abilityName: "shrouded step",
-        artwork: "/Assets/omen/ability1",
-        description:
-          "EQUIP a shrouded step ability and see its range indicator. FIRE to begin a brief channel, then teleport to the marked location.",
-        key: "",
-        credits: null,
-        cooldown: null,
-        duration: null,
-      },
-      {
-        abilityName: "paranoia",
-        artwork: "/Assets/omen/ability2",
-      },
-      {
-        abilityName: "dark cover",
-        artwork: "/Assets/omen/ability3",
-      },
-      {
-        abilityName: "from the shadows",
-        artwork: "/Assets/omen/ability4",
-      },
-    ],
-  },
-];
-
 enum Type {
   CONTROLLER = "Controller",
   SENTINEL = "Sentinel",
@@ -36,88 +5,88 @@ enum Type {
   DUELIST = "Duelist",
 }
 
-const agents = {
-  Brimstone: {
+export const valorantAgents = {
+  brimstone: {
     theme: "#c8641a",
     type: Type.CONTROLLER,
   },
-  Viper: {
+  viper: {
     theme: "#07a645",
     type: Type.CONTROLLER,
   },
-  Omen: {
+  omen: {
     theme: "#6869F8",
     type: Type.CONTROLLER,
   },
-  Killjoy: {
+  killjoy: {
     theme: "#f8db30",
     type: Type.SENTINEL,
   },
-  Cypher: {
+  cypher: {
     theme: "#e6e6e6",
     type: Type.SENTINEL,
   },
-  Sova: {
+  sova: {
     theme: "#233d78",
     type: Type.INITIATOR,
   },
-  Sage: {
+  sage: {
     theme: "#25f9d1",
     type: Type.SENTINEL,
   },
-  Phoenix: {
+  phoenix: {
     theme: "#fcd887",
     type: Type.DUELIST,
   },
-  Jett: {
+  jett: {
     theme: "#7afaf5",
     type: Type.DUELIST,
   },
-  Reyna: {
+  reyna: {
     theme: "#b32895",
     type: Type.DUELIST,
   },
-  Raze: {
+  raze: {
     theme: "#c24b15",
     type: Type.DUELIST,
   },
-  Breach: {
+  breach: {
     theme: "#b64e22",
     type: Type.INITIATOR,
   },
-  Skye: {
+  skye: {
     theme: "#61d6b6",
     type: Type.INITIATOR,
   },
-  Yoru: {
+  yoru: {
     theme: "#2324a0",
     type: Type.DUELIST,
   },
-  Astra: {
+  astra: {
     theme: "#5220b6",
     type: Type.CONTROLLER,
   },
-  "KAY/O": {
+  kayo: {
     theme: "#2b4ed4",
     type: Type.INITIATOR,
   },
-  Chamber: {
+  chamber: {
     theme: "#be935b",
     type: Type.SENTINEL,
   },
-  Neon: {
+  neon: {
     theme: "#3a61ba",
     type: Type.DUELIST,
   },
-  Fade: {
+  fade: {
     theme: "#315986",
     type: Type.INITIATOR,
   },
-  Harbor: {
+  harbor: {
     theme: "#387966",
     type: Type.CONTROLLER,
   },
-  Gekko: {
+  gekko: {
     theme: "#3e902d",
     type: Type.INITIATOR,
   },

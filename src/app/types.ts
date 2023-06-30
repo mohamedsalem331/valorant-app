@@ -1,11 +1,17 @@
-import { StaticImageData } from "next/image";
-
-export type AbilityDto = {
+export interface AbilityDto {
   name: string;
-  artwork: StaticImageData;
-  duration: string;
-  cost: number;
-  cooldown: string;
+  imageUrl: string;
+  videoUrl: string;
   description: string;
-  keymap: string;
-};
+  keybind: string;
+}
+
+export interface AgentDto {
+  agent: string;
+  theme: string;
+  type: string;
+}
+
+// duration: string;
+// cost: number;
+// cooldown: string;

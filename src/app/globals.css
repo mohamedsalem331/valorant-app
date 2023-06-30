@@ -16,22 +16,18 @@
 
 body {
     @apply bg-[#1E2031] h-full;
+    
 }
 
 html {
     @apply h-full;
+    @apply scroll-smooth;
 }
 
 .animate-gradient {
   background: linear-gradient(180deg, rgba(0, 0, 0, 20%) 55%, rgba(0, 0, 0, 100%) 90%);
   transition: 300ms;
 }
-
-/* .test:hover {
-  background-color: red;
-  transition: ease-in-out;
-  transition-duration: 1s;
-} */
 
 .ability-list::before {
   content: "";
@@ -42,6 +38,18 @@ html {
   background-color: rgb(228, 228, 228);
   z-index: -1;
   width: 100%;
+}
+
+.image_overlay {
+  content: "";
+  display: block;
+  height: 100%;
+  opacity: 1;
+  position: absolute;
+  top: 0;
+  transform:  skew(-20deg);
+  width: 100%;
+  z-index: 1 ;
 }
 
 @keyframes fadegradient {
@@ -66,3 +74,22 @@ html {
   background: linear-gradient(180deg, rgba(0, 0, 0, 20%) 55%, rgba(104, 105, 248, 100%) 90%); */
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: #a5a5b8;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #6869F8;
+  border-radius: 5px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3c3cad;
+
+}

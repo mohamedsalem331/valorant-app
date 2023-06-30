@@ -14,6 +14,10 @@ module.exports = {
         'primary': '#6869F8',
         'secondary': '#1E2031',
       },
+      fontFamily: {
+        sans: ['Graphik', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
+      },
     },
   },
   plugins: [],
