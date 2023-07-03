@@ -1,10 +1,36 @@
-const AbilityVideo = () => {
+"use client";
+
+import { useEffect, useRef, useState } from "react";
+
+interface IAbilityVideoProps {
+  videoUrl: string;
+}
+
+const AbilityVideo: React.FC<IAbilityVideoProps> = ({ videoUrl }) => {
+  // const videoRef = useRef(null);
+  // const [isPlaying, setIsPlaying] = useState(false);
+
+  // useEffect(() => {
+  //   if (videoRef.current) {
+  //     videoRef.current.load();
+  //     if (isPlaying) {
+  //       videoRef.current.play();
+  //     }
+  //   }
+  // }, [videoUrl]);
+
   return (
     <>
-      <div className="w-[700px] ">
-        <video autoPlay preload="true" loop muted>
-          <source src={data[active].videoUrl} type="video/mp4" />
-        </video>
+      <div className="">
+        <video
+          src={videoUrl}
+          autoPlay
+          preload="true"
+          loop
+          muted
+          width="750"
+          height="500"
+        />
       </div>
     </>
   );

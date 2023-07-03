@@ -22,6 +22,11 @@ const getAgentData = async (agent: string) => {
       "ul.SpecialAbilities-module--abilitiesList--VefyK li"
     );
 
+    const agentBiography = await valorantPage.$eval(
+      "p.AgentHeroDetail-module--descriptionText--ScwZJ",
+      (el) => el.textContent
+    );
+
     for (const abilityHandle of abilityDetailsSelectors) {
       let abilityObject = {
         name: "",
@@ -69,7 +74,12 @@ const getAgentData = async (agent: string) => {
 
       abilitiesList.push(abilityObject);
     }
-    return abilitiesList;
+    return {
+      agentData: {
+        agentBiography,
+        abilitiesList,
+      },
+    };
   } catch (error) {
     console.log(error);
   } finally {

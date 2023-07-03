@@ -19,8 +19,11 @@ export default async function RootLayout({
     <html lang="en">
       <body>
         <Logo />
-        <Hero />
-        <main className="mx-auto px-40">{children}</main>
+
+        <main className="mx-auto max-w-[100rem] h-full">
+          <Hero />
+          {children}
+        </main>
       </body>
     </html>
   );

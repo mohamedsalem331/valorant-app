@@ -1,30 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import Image from "next/image";
-import { AbilityDto, AgentDto } from "../types";
 
-interface IAgentCardProps extends AbilityDto, AgentDto {}
-
-const AgentCard: React.FC<IAgentCardProps> = ({
-  name,
-  keybind,
-  description,
-  imageUrl,
-  videoUrl,
-  theme,
-  type,
-  agent,
-}) => {
+interface IAgentCardProps {
+  agent: string;
+  theme: string;
+}
+//
+const AgentCard: React.FC<IAgentCardProps> = ({ agent, theme }) => {
   return (
     <>
-      <div className="relative overflow-hidden group/card flex hover:scale-110 cursor-pointer justify-center items-center w-[17rem] h-[28rem] bg-opacity-0 border-4 rounded-xl border-primary duration-500">
-        <Image
-          src={`/Assets/Artworks/${agent}.webp`}
-          alt="agent-img"
-          className="absolute -translate-y-[2.5rem] scale-110 "
-        />
-        <div className="relative w-[15.5rem] h-[26.5rem]  border-[1px] rounded-lg border-gray-300 border-opacity-50 animate-gradient">
-          <div className="absolute bottom-[12%] left-[33%] text-white text-[28px] font-bold">
-            {agent}
+      <div
+        className={`bg-slate-200 overflow-hidden flex group-hover/card:scale-110 group-hover/card:p-0  p-2 cursor-pointer justify-center items-center w-[20rem] h-[35rem] bg-opacity-0 border-4 rounded-xl duration-500`}
+        style={{ borderColor: `${theme}` }}
+      >
+        {/* bg-gradient-to-t from-indigo-500 via-purple-500 to-pink-500 */}
+        <div
+          className="relative w-full h-full group-hover/card:border-0 border-[1px] rounded-lg border-gray-300 "
+          style={{
+            backgroundImage: `linear-gradient(to top, #2c2c2c  20%, ${theme} 70%)`,
+          }}
+        >
+          <Image
+            src={`/Assets/Artworks/${agent}.png`}
+            width={500}
+            height={500}
+            alt="agent-img"
+            className="w-full  -translate-y-5"
+          />
+          <div className="absolute bottom-[5%] left-[31%] text-white text-[28px] font-bold">
+            {agent.toUpperCase()}
           </div>
         </div>
       </div>

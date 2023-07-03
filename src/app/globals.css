@@ -15,12 +15,11 @@
   } */
 
 body {
-    @apply bg-[#1E2031] h-full;
+    @apply bg-[#1E2031] h-screen;
     
 }
 
 html {
-    @apply h-full;
     @apply scroll-smooth;
 }
 
@@ -50,28 +49,6 @@ html {
   transform:  skew(-20deg);
   width: 100%;
   z-index: 1 ;
-}
-
-@keyframes fadegradient {
-  0% {
-    opacity: 1;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 20%) 55%, rgba(0, 0, 0, 100%) 90%);
-  }
-  50% {
-    opacity: 0;
-    
-  }
-  100% {
-    opacity: 1;
-    background: linear-gradient(180deg, rgba(0, 0, 0, 20%) 55%, rgba(104, 105, 248, 100%) 90%); 
-  }
-}
-
-.animate-gradient:hover {
-  animation: fadegradient 300ms ease-in-out;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 20%) 55%, rgba(104, 105, 248, 100%) 90%);
-  /* opacity: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 20%) 55%, rgba(104, 105, 248, 100%) 90%); */
 }
 
 ::-webkit-scrollbar {
