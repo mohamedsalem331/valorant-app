@@ -1,4 +1,4 @@
-import useAgent from "../../hooks/useAgent";
+import useAgent from "@/app/hooks/useAgent";
 import { valorantAgents } from "../../../../constant";
 import AbilityDetails from "@/app/components/AbilityDetails";
 import Title from "@/app/components/Title";
@@ -7,11 +7,11 @@ import AbilityList from "@/app/components/AbilityList";
 import AbilityVideo from "@/app/components/AbilityVideo";
 import { AgentDto } from "@/app/types";
 
-export async function generateStaticParams() {
-  return Object.keys(valorantAgents).map((key) => {
-    return { slug: key };
-  });
-}
+// export async function generateStaticParams() {
+//   return Object.keys(valorantAgents).map((key) => {
+//     return { slug: key };
+//   });
+// }
 
 const Home = async ({ params }: { params: { slug: string } }) => {
   const name = params.slug;
